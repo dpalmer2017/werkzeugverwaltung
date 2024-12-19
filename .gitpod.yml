@@ -1,0 +1,12 @@
+tasks:
+  - init: |
+      sudo apt-get update
+      sudo apt-get install -y python3-pip build-essential git python3 python3-dev automake autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake
+      pip3 install buildozer
+      buildozer init
+    command: |
+      echo "Entwicklungsumgebung ist bereit!"
+
+ports:
+  - port: 8000
+    onOpen: ignore
